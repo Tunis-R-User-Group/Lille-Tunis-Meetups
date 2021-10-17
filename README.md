@@ -1,2 +1,2 @@
-# collaborative-working-R-Lille-and-Tunis-R-User-Group
-You find in this repository all the collaborative working between R Lille and Tunis R User Group.
+# travaux-de-collaboration-R-Lille-and-Tunis-R-User-Group
+Veuillez trouver dans ce dépôt les traveaux de collaborations entre R Lille and Tunis R User Group.
