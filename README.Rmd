@@ -1,0 +1,40 @@
+---
+output: github_document
+---
+
+# Collaboration R Lille et Tunis R User Group <a href="https://github.com/RLille/"><img src="https://avatars1.githubusercontent.com/u/60702180" align="right" width="120" /></a><a href="https://github.com/Tunis-R-User-Group/"><img src="https://avatars1.githubusercontent.com/u/92409159" align="right" width="120" /></a> 
+
+
+<!-- badges: start -->
+<!-- [![License](https://img.shields.io/github/license/RLille/meetup-poster)](LICENSE) -->
+<!-- badges: end -->
+
+Veuillez trouver dans ce dépôt les travaux de collaborations entre R Lille et Tunis R User Group.
+
+```{r, echo = FALSE, message = FALSE}
+source("assets/social.R")
+library(glue)
+
+rscript <- list.files(path = "R", pattern = "^20.*\\.R$", full.names = TRUE)
+meetup <- sub("\\.R$", "", basename(rscript))
+png <- sprintf("meetups/%s/ads/%s.png", meetup, meetup)
+
+outdated <- !file.exists(png) |
+  file.mtime(png) < file.mtime(rscript) |
+  file.mtime(png) < file.mtime("assets/social.R")
+
+invisible(lapply(rscript[outdated], source, encoding = "UTF-8"))
+```
+
+```{r, results = "asis", echo = FALSE}
+img <- glue::glue('<img alt="Poster for {meetup} Meetup" src="{png}" width="192" height="108" />')
+png_link <- glue::glue('<a href="meetups/{meetup}">{meetup}</a>')
+cell <- paste0('<td align = "center">', img, "<br />", png_link, "</td>")
+cols <- 4
+rows <- ceiling(length(cell) / cols)
+row_id <- rep(seq_len(rows), each = cols, length.out = length(cell))
+row_cells <- split(cell, row_id)
+cat("<table>\n")
+cat(paste0("<tr>", sapply(row_cells, paste, collapse = ""), "</tr>"), sep = "")
+cat("</table>\n")
+```
