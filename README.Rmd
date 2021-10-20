@@ -6,7 +6,7 @@ output: github_document
 
 
 <!-- badges: start -->
-<!-- [![License](https://img.shields.io/github/license/RLille/meetup-poster)](LICENSE) -->
+<!-- [![License](https://img.shields.io/github/license/Tunis-R-User-Group/Lille-Tunis-Meetups)](LICENSE) -->
 <!-- badges: end -->
 
 Veuillez trouver dans ce dépôt les Meetups issues de la collaboration entre R Lille et Tunis R User Group.
