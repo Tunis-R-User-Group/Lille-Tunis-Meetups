@@ -1,5 +1,5 @@
 
-# Collaboration R Lille et Tunis R User Group <img src="assets/rlille_tunis.png" align="right" width="120" />
+# Collaboration R Lille et Tunis R User Group <img src="assets/rlille_tunis.svg" align="right" width="120" />
 
 <!-- badges: start -->
 <!-- [![License](https://img.shields.io/github/license/Tunis-R-User-Group/Lille-Tunis-Meetups)](LICENSE) -->
