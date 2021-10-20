@@ -33,6 +33,7 @@ social <- function(input, output, rmd_params, chrome_path, delay = 1) {
       X = file.path(output, c("materials", "ads")),
       FUN = dir.create, showWarnings = FALSE, recursive = TRUE
     )
+    file.create(file.path(output, c("materials", "ads"), ".gitkeep"))
     
     xaringan_poster <- rmarkdown::render(
       input = input,
