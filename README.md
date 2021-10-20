@@ -5,8 +5,8 @@
 <!-- [![License](https://img.shields.io/github/license/RLille/meetup-poster)](LICENSE) -->
 <!-- badges: end -->
 
-Veuillez trouver dans ce dépôt les travaux de collaborations entre R
-Lille et Tunis R User Group.
+Veuillez trouver dans ce dépôt les Meetups issues de la collaboration
+entre R Lille et Tunis R User Group.
 
 <table>
 <tr>
