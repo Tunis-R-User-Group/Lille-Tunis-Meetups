@@ -28,20 +28,20 @@ library(pdftools)
 library(jsonlite)
 
 social <- function(input, output, rmd_params, chrome_path, delay = 1) {
-  print_to_pdf <- function(input, output, rmd_params, chrome_path, delay) {
+  print_to_pdf <- function(input, output, rmd_params, chrome_path, delay = 1) {
     devnull <- sapply(
       X = file.path(output, c("materials", "ads")),
       FUN = dir.create, showWarnings = FALSE, recursive = TRUE
     )
     file.create(file.path(output, c("materials", "ads"), ".gitkeep"))
-    
+
     xaringan_poster <- rmarkdown::render(
       input = input,
       output_dir = tempdir(),
       encoding = "UTF-8",
       params = rmd_params
     )
-    
+
     web_browser <- suppressMessages(try(chromote::ChromoteSession$new(), silent = TRUE))
 
     if (
@@ -150,7 +150,7 @@ social <- function(input, output, rmd_params, chrome_path, delay = 1) {
       pdf_file_promise <- web_browser$Page$printToPDF(
         landscape = TRUE,
         printBackground = TRUE,
-        paperWidth = 12,
+        paperWidth = 16,
         paperHeight = 9,
         marginTop = 0,
         marginRight = 0,
