@@ -1,4 +1,6 @@
 Package: lille.tunis.meetups
+Title: ECollaboration R Lille et Tunis R User Group
+Version: 0.0.0.9000
 Imports:
   here,
   glue,
