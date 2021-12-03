@@ -26,6 +26,7 @@ library(rmarkdown)
 library(qpdf)
 library(pdftools)
 library(jsonlite)
+library(digest)
 
 social <- function(input, output, rmd_params, chrome_path, delay = 1) {
   print_to_pdf <- function(input, output, rmd_params, chrome_path, delay = 1) {
@@ -45,19 +46,20 @@ social <- function(input, output, rmd_params, chrome_path, delay = 1) {
 
     web_browser <- suppressMessages(try(chromote::ChromoteSession$new(), silent = TRUE))
 
-    if (
-      inherits(web_browser, "try-error") &&
-      missing(chrome_path) &&
-      Sys.info()[["sysname"]] == "Windows"
-    ) {
-      edge_path <- "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" # remove hard-coded path at some point
-      if (file.exists(edge_path)) {
-        Sys.setenv(CHROMOTE_CHROME = edge_path)
-        web_browser <- chromote::ChromoteSession$new()
-      } else {
-        stop('Please set Sys.setenv(CHROMOTE_CHROME = "Path/To/Chrome")')
-      }
-    }
+    # if (
+    #   inherits(web_browser, "try-error") &&
+    #   missing(chrome_path) &&
+    #   Sys.info()[["sysname"]] == "Windows"
+    # ) {
+    #   edge_path <- "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" # remove hard-coded path at some point
+    #   if (file.exists(edge_path)) {
+    #     Sys.setenv(CHROMOTE_CHROME = edge_path)
+    #     web_browser <- chromote::ChromoteSession$new()
+    #   } else {
+    #     stop('Please set Sys.setenv(CHROMOTE_CHROME = "Path/To/Chrome")')
+    #   }
+    # }
+    Sys.setenv(CHROMOTE_CHROME = chromote::find_chrome())
 
     web_browser$Page$navigate(xaringan_poster, wait_ = TRUE)
     on.exit(web_browser$close(), add = TRUE)
@@ -91,19 +93,6 @@ social <- function(input, output, rmd_params, chrome_path, delay = 1) {
     )
 
     max_slides <- expected_slides# * 4
-
-    # slide_size <- ({
-    #   r <- web_browser$Runtime$evaluate("slideshow.getRatio()")$result$value
-    #   r <- lapply(strsplit(r, ":"), as.integer)
-    #   width <- r[[1]][1]
-    #   height <- r[[1]][2]
-    #   page_width <- 8 / width * width
-    #   list(
-    #     width = as.integer(908 * width / height),
-    #     height = 681L,
-    #     page = list(width = page_width, height = page_width * height / width)
-    #   )
-    # })
 
     web_browser$Browser$setWindowBounds(1, bounds = list(
       width = 1920,
