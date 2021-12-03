@@ -25,7 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          Rscript -e 'install.packages(c("here", "glue", "remotes", "callr", "rmarkdown", "qpdf", "pdftools", "jsonlite", "digest"), Ncpus = 4)'
+          Rscript -e 'install.packages(c("here", "glue", "remotes", "callr", "xaringan", "rmarkdown", "qpdf", "pdftools", "jsonlite", "digest"), Ncpus = 4)'
           Rscript -e 'remotes::install_github("rstudio/chromote")'
 
       - name: Render README
