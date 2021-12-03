@@ -36,12 +36,12 @@ social <- function(input, output, rmd_params, chrome_path, delay = 1) {
     )
     file.create(file.path(output, c("materials", "ads"), ".gitkeep"))
 
-    xaringan_poster <- rmarkdown::render(
+    xaringan_poster <- normalizePath(rmarkdown::render(
       input = input,
       output_dir = tempdir(),
       encoding = "UTF-8",
       params = rmd_params
-    )
+    ))
     on.exit(unlink(xaringan_poster))
 
     web_browser <- suppressMessages(try(chromote::ChromoteSession$new(), silent = TRUE))
