@@ -41,6 +41,7 @@ social <- function(input, output, rmd_params, chrome_path, delay = 1) {
       encoding = "UTF-8",
       params = rmd_params
     )
+    on.exit(unlink(xaringan_poster))
 
     web_browser <- suppressMessages(try(chromote::ChromoteSession$new(), silent = TRUE))
 
@@ -62,7 +63,7 @@ social <- function(input, output, rmd_params, chrome_path, delay = 1) {
     on.exit(web_browser$close(), add = TRUE)
     web_browser$Page$loadEventFired()
 
-    # web_browser$screenshot( 
+    # web_browser$screenshot(
     #   filename = sprintf("%s/ads/%s.png", output, basename(output)),
     #   selector = "div.remark-slide-scaler",
     #   scale = 2

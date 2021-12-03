@@ -3,12 +3,34 @@
   --lille-colour: #D40000;
   --font-colour: #333333;
   --bg-colour: #FAFAFA;
-  --logo: url(https://raw.githubusercontent.com/Tunis-R-User-Group/Lille-Tunis-Meetups/main/assets/rlille_tunis.svg);
+  --logo: url(rlille_tunis.svg);
 }
 
 /* linear-gradient(to bottom right, var(--tunis-colour), var(--lille-colour)) */
 
 @import url("https://use.fontawesome.com/releases/v5.12.1/css/all.css");
+
+.lille {
+  color: var(--lille-colour);
+}
+
+.tunis {
+  color: var(--tunis-colour);
+}
+
+.left {
+  float: left;
+  width: 25%;
+}
+
+.right {
+  float: right;
+  width: 75%;
+}
+
+.middle {
+  padding-top: 5%;
+}
 
 .logo {
   content: "";
@@ -94,6 +116,8 @@ a:hover {
   background-repeat: no-repeat;
   background-size: 100px auto;
   background-image: var(--logo);
+  outline: thick double var(--tunis-colour);
+  outline-offset: -10px;
 }
 
 .part-slide {
@@ -244,35 +268,39 @@ th, td {
   color: #7F7F7F;
 }
 
-.title-slide h1  {
-  color: var(--font-colour);
+.title-slide h1 {
+  color: var(--lille-colour);
   font-size: 50px;
   text-shadow: none;
   font-weight: 400;
-  text-align: left;
+  text-align: center;
   margin-left: 15px;
   padding-top: 80px;
 }
 
-.title-slide h2  {
+.title-slide h2 {
   margin-top: -25px;
   padding-bottom: -20px;
-  color: var(--font-colour);
+  color: var(--lille-colour);
   text-shadow: none;
   font-weight: 300;
   font-size: 35px;
-  text-align: left;
+  text-align: center;
   margin-left: 15px;
 }
 
-.title-slide h3  {
-  color: #7F7F7F;
+.title-slide h3 {
+  color: var(--tunis-colour);
   text-shadow: none;
   font-weight: 300;
   font-size: 25px;
-  text-align: left;
+  text-align: center;
   margin-left: 15px;
   margin-bottom: -30px;
+}
+
+.title-slide .lille h3 {
+  color: var(--lille-colour);
 }
 
 hr, .mline h1::after {
@@ -286,6 +314,7 @@ hr, .title-slide h2::after, .mline h1::after {
   background-color: var(--font-colour);
   color: var(--font-colour);
   height: 3px;
+  text-align: center;
 }
 
 .title-slide h2::after {
@@ -490,9 +519,9 @@ hr, .title-slide h2::after, .mline h1::after {
 }
 
 .column {
-  float: left;
+  float: center;
   text-align: center;
-  width: 33.33%;
+  width: 50%;
 }
 
 .remark__tile-view * {
