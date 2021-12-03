@@ -21,11 +21,12 @@ jobs:
       - name: Install Chrome
         run: |
           sudo apt-get update
-          sudo apt-get install -y google-chrome-stable libcurl4-openssl-dev 
+          sudo apt-get install -y google-chrome-stable libcurl4-openssl-dev libpoppler-cpp-dev
 
       - name: Install dependencies
         run: |
-          Rscript -e 'install.packages(c("glue", "rstudio/chromote", "callr", "rmarkdown", "qpdf", "pdftools", "jsonlite", "digest"), Ncpus = 4)'
+          Rscript -e 'install.packages(c("glue", "remotes", "callr", "rmarkdown", "qpdf", "pdftools", "jsonlite", "digest"), Ncpus = 4)'
+          Rscript -e 'remotes::install_github("rstudio/chromote")'
 
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd", output_options = list(html_preview = FALSE))'
