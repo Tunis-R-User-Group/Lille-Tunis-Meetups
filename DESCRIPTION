@@ -1,0 +1,12 @@
+Package: lille.tunis.meetups
+Imports:
+  here,
+  glue,
+  callr,
+  xaringan,
+  rmarkdown,
+  qpdf,
+  pdftools,
+  jsonlite,
+  digest,
+  rstudio/chromote

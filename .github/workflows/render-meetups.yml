@@ -24,19 +24,6 @@ jobs:
           sudo apt-get install -y google-chrome-stable libcurl4-openssl-dev libpoppler-cpp-dev
 
       - uses: r-lib/actions/setup-r-dependencies@v1
-        with:
-          cache-version: 2
-          extra-packages: |
-            here
-            glue
-            callr
-            xaringan
-            rmarkdown
-            qpdf
-            pdftools
-            jsonlite
-            digest
-            rstudio/chromote
 
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd", output_options = list(html_preview = FALSE))'
