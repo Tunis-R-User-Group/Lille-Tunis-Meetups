@@ -11,4 +11,6 @@ Imports:
   pdftools,
   jsonlite,
   digest,
-  rstudio/chromote
+  chromote
+Remotes:
+  github::rstudio/chromote
