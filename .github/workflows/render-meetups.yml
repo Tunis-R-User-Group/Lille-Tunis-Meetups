@@ -18,16 +18,14 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v1
 
-      - name: Install Chrome and curl
+      - name: Install Chrome
         run: |
           apt-get update
-          apt-get install -y google-chrome-stable curl
-
-      - name: Install pak
-        run: Rscript -e 'install.packages("pak")'
+          apt-get install -y google-chrome-stable
 
       - name: Install dependencies
-        run: Rscript -e 'pak::pkg_install(c("glue", "chromote", "callr", "rmarkdown", "qpdf", "pdftools", "jsonlite", "digest"))'
+        run: |
+          Rscript -e 'install.packages(c("glue", "chromote", "callr", "rmarkdown", "qpdf", "pdftools", "jsonlite", "digest"), Ncpus = 4)'
 
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd", output_options = list(html_preview = FALSE))'
