@@ -21,7 +21,7 @@ jobs:
       - name: Install Chrome
         run: |
           sudo apt-get update
-          sudo apt-get install -y google-chrome-stable libcurl4-openssl-dev libpoppler-cpp-dev imagemagick
+          sudo apt-get install -y google-chrome-stable libcurl4-openssl-dev libpoppler-cpp-dev libmagick++-dev
 
       - name: Cache R packages
         uses: actions/cache@v1
