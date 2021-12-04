@@ -21,11 +21,18 @@ jobs:
       - name: Install Chrome
         run: |
           sudo apt-get update
-          sudo apt-get install -y google-chrome-stable libcurl4-openssl-dev libpoppler-cpp-dev
+          sudo apt-get install -y google-chrome-stable libcurl4-openssl-dev libpoppler-cpp-dev imagemagick
+
+      - name: Cache R packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
       - name: Install dependencies
         run: |
-          Rscript -e 'install.packages(c("here", "glue", "remotes", "callr", "pdftools", "qpdf"), Ncpus = 4)'
+          Rscript -e 'install.packages(c("here", "glue", "remotes", "callr", "pdftools", "qpdf", "magick"), Ncpus = 4)'
           Rscript -e 'remotes::install_github("rstudio/chromote")'
           Rscript -e 'remotes::install_github("jhelvy/xaringanBuilder")'
 
