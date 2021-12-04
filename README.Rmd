@@ -13,6 +13,7 @@ Veuillez trouver dans ce dépôt les Meetups issues de la collaboration entre R 
 ```{r, echo = FALSE, message = FALSE}
 source("assets/social.R")
 library(glue)
+library(here)
 
 rscript <- list.files(path = "R", pattern = "^20.*\\.R$", full.names = TRUE)
 meetup <- sub("\\.R$", "", basename(rscript))
