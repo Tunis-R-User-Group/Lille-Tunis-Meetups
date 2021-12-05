@@ -30,7 +30,17 @@ social <- function(input, output, rmd_params, chrome_path, delay = 1) {
       X = file.path(output, c("materials", "ads")),
       FUN = dir.create, showWarnings = FALSE, recursive = TRUE
     )
-    file.create(file.path(output, c("materials", "ads"), ".gitkeep"))
+    # file.create(file.path(output, c("materials", "ads"), ".gitkeep"))
+
+    if (length(list.files(file.path(output, "materials", "README.md"))) == 0) {
+      writeLines(
+        sprintf(
+          "# %s\n\nSpeaker: %s\n\n- Video: \n\n- Slides: ",
+          rmd_params[["title"]], rmd_params[["author"]]
+        ),
+        con = file.path(output, "materials", "README.md")
+      )
+    }
 
     xaringan_poster <- rmarkdown::render(
       input = input,
