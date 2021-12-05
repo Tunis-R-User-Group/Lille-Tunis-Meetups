@@ -23,7 +23,7 @@ outdated <- !file.exists(png) |
   file.mtime(png) < file.mtime(rscript) |
   file.mtime(png) < file.mtime("assets/social.R")
 
-invisible(lapply(rscript[TRUE], source, encoding = "UTF-8"))
+invisible(lapply(rscript[outdated], source, encoding = "UTF-8"))
 ```
 
 ```{r, results = "asis", echo = FALSE}
