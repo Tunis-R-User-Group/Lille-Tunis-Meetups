@@ -103,7 +103,7 @@ Ou si vous êtes intéressé par un sujet spécifique, dites le nous, nous tâch
 
 - [<i class = "fab fa-meetup tunis"></i> meetup.com/tunis-r-user-group](https://www.meetup.com/tunis-r-user-group)
 
-- [<i class = "fas fa-envelope lille"></i> tunis.rusergroup@gmail.com](mailto:tunis.rusergroup@gmail.com)
+- [<i class = "fas fa-envelope tunis"></i> tunis.rusergroup@gmail.com](mailto:tunis.rusergroup@gmail.com)
 
 - [<i class = "fab fa-github tunis"></i> github.com/Tunis-R-User-Group](https://github.com/Tunis-R-User-Group)
 
