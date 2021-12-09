@@ -4,7 +4,7 @@ params:
   subtitle: "Optional subtitle"
   author: "Firstname Lastname"
   institute: "Enterprise or company or else"
-  date: "Lundi 1 Janvier 2022 – 18 h 00 CET"
+  date: "Lundi 1 Janvier 2022 à 18 h 00 CET"
   picture: "user-solid.svg"
   website: "[rlille.fr](https://rlille.fr/) & [meetup.com/tunis-r-user-group](https://www.meetup.com/tunis-r-user-group/)"
 title: "R Lille & Tunis R User Group - Poster"
@@ -52,7 +52,7 @@ class: title-slide
 
 .pull-left.font150[
 
-Nous sommes toujours à la recherche d’orateurs•rices :
+Nous sommes toujours à la recherche d'orateurs.rices :
 
 + Conférence (~ 1 heure)
 
@@ -74,7 +74,7 @@ Si vous souhaitez participer, rien de plus simple :
 
 .center.font150[
 
-Ou si vous êtes intéressé par un sujet spécifique, dites le nous, nous tâcherons de trouver un orateurs•rice.
+Ou si vous êtes intéressé par un sujet spécifique, dites le nous, nous tâcherons de trouver un orateurs.rice.
 
 ]
 
@@ -103,9 +103,15 @@ Ou si vous êtes intéressé par un sujet spécifique, dites le nous, nous tâch
 
 - [<i class = "fab fa-meetup tunis"></i> meetup.com/tunis-r-user-group](https://www.meetup.com/tunis-r-user-group)
 
+- [<i class = "fas fa-envelope lille"></i> tunis.rusergroup@gmail.com](mailto:tunis.rusergroup@gmail.com)
+
 - [<i class = "fab fa-github tunis"></i> github.com/Tunis-R-User-Group](https://github.com/Tunis-R-User-Group)
 
-- [<i class = "fab fa-youtube tunis"></i> youtube.com](https://www.youtube.com/channel/UCyf1AvRK4gmfRUJjeBNMauA)
+- [<i class = "fab fa-youtube tunis"></i> Tunis R User Group](https://www.youtube.com/channel/UCyf1AvRK4gmfRUJjeBNMauA)
+
+- [<i class = "fab fa-facebook tunis"></i> facebook.com/tunisrusergroup](https://www.facebook.com/tunisrusergroup)
+
+- [<i class = "fab fa-instagram tunis"></i> instagram.com/tunisrusergroup](https://www.instagram.com/tunisrusergroup/)
 
 ]
 
