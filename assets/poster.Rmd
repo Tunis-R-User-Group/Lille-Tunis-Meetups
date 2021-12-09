@@ -85,7 +85,7 @@ Ou si vous êtes intéressé par un sujet spécifique, dites le nous, nous tâch
 
 .pull-left.font150.lille[
 
-- [<i class = "fab fa-twitter lille"></i> @rlille_rug](https://twitter.com/rlille_rug)
+- [<i class = "fab fa-twitter lille"></i> @RLille_RUG](https://twitter.com/RLille_RUG)
 
 - [<i class = "fab fa-meetup lille"></i> meetup.rlille.fr](http://meetup.rlille.fr/)
 
