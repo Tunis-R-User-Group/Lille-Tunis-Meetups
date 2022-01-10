@@ -42,15 +42,17 @@ social <- function(input_poster, input_announcement, output, rmd_params, chrome_
       )
     }
 
-    rmarkdown::render(
-      input = input_announcement,
-      output_file = sprintf("%s/ads/%s.md", output, basename(output)),
-      encoding = "UTF-8",
-      params = rmd_params[c(
-        "title", "author", "date", "date_short",
-        "abstract", "biography", "survey_url"
-      )]
-    )
+    if (all(nzchar(rmd_params[c("survey_url", "abstract", "biography")]))) {
+      rmarkdown::render(
+        input = input_announcement,
+        output_file = sprintf("%s/ads/%s.md", output, basename(output)),
+        encoding = "UTF-8",
+        params = rmd_params[c(
+          "title", "author", "date", "date_short",
+          "abstract", "biography", "survey_url"
+        )]
+      )
+    }
 
     xaringan_poster <- rmarkdown::render(
       input = input_poster,
