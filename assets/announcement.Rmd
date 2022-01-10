@@ -31,7 +31,8 @@ La langue du Meetup est le français.
 Le Meetup sera enregistré et rendu disponible sur YouTube.
 
 [Inscription]  
-Pour assister au Meetup, veuillez remplir ce court formulaire : %s
+Pour assister au Meetup, veuillez remplir ce court formulaire : %s  
+Le lien Zoom sera envoyé par courriel après inscription et quelques jours avant le début du Meetup.
 
 [Média Sociaux]  
 
