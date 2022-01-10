@@ -10,7 +10,7 @@ social(
     date = "Lundi 1 Janvier 2022 - 18:00 CET",
     picture = here::here("assets/user-solid.svg"),
     website = NULL,
-    date_short = "2022-01-01",
+    date_short = "2022-XX-XX",
     abstract = "Résumé",
     biography = "Biographie",
     survey_url = ""
