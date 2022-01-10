@@ -25,7 +25,7 @@ social(
     website = "https://thinkr.fr",
     date_short = "2022-02-24",
     abstract = abstract_text,
-    biography = bio_text
+    biography = bio_text,
     survey_url = ""
   )
 )
