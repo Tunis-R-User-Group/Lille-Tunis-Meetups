@@ -1,7 +1,7 @@
 abstract_text <- paste(
   "Vous souhaitez construire un application Shiny en suivant les meilleures pratiques de développement ? Alors le package {golem} est ce qu'il vous faut.",
   "Grâce à {golem}, chaque application Shiny est un… package 📦 !",
-  "Cela vous permettra de faciliter la création de votre application, en automatisant les tâches ennuyantes répétitives par lesquelles vous devrez nécessairement passer.",
+  "Cela vous permettra de faciliter la création de votre application, en automatisant les tâches ~~ennuyantes~~ répétitives par lesquelles vous devrez nécessairement passer.",
   "Cela vous permettra aussi de faciliter son déploiement et d'assurer sa durabilité, en développant un code documenté et testé 🎉.",
   sep = "\n"
 )
