@@ -12,8 +12,6 @@ bio_text <- paste(
   sep = "  \n"
 )
 social(
-  input_poster = here::here("assets/poster.Rmd"),
-  input_announcement = here::here("assets/announcement.Rmd"),
   output = here::here("meetups/2022-02-24"),
   rmd_params = list(
     title = "{golem}",
