@@ -25,7 +25,7 @@ library(rmarkdown)
 library(xaringanBuilder)
 
 social <- function(input_poster, input_announcement, output, rmd_params, chrome_path, delay = 1) {
-  render_meetup <- function(input, output, rmd_params, chrome_path, delay = 1) {
+  render_meetup <- function(input_poster, input_announcement, output, rmd_params, chrome_path, delay = 1) {
     devnull <- sapply(
       X = file.path(output, c("materials", "ads")),
       FUN = dir.create, showWarnings = FALSE, recursive = TRUE
