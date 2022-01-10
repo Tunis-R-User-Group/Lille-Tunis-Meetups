@@ -8,7 +8,7 @@ abstract_text <- paste(
 bio_text <- paste(
   "Margot Brard (https://github.com/MargotBr), docteure en statistique appliquée, est consultante et formatrice R chez ThinkR (https://rtask.thinkr.fr/ et https://thinkr.fr).",
   "Elle y forme des apprenants à l'utilisation de R pour l'analyse de données et au développement de packages. Elle participe également au développement de packages R pour différents clients (entreprises privées, institutions publiques, etc.).",
-  "Elle est la lauréate de l'édition 2021 du Shiny Contest (https://blog.rstudio.com/2021/06/24/winners-of-the-3rd-annual-shiny-contest/). Au grand désespoir de son mari - qui l'a trouvée un peu trop geek sur ce coup - elle a développé avec {golem} une app Shiny pour leur mariage : {wedding} (https://github.com/ThinkR-open/wedding).",
+  "Elle est la lauréate de l'édition 2021 du Shiny Contest (https://blog.rstudio.com/2021/06/24/winners-of-the-3rd-annual-shiny-contest/). Au grand désespoir de son mari - *qui l'a trouvée un peu trop geek sur ce coup* - elle a développé avec {golem} une app Shiny pour leur mariage : {wedding} (https://github.com/ThinkR-open/wedding).",
   sep = "  \n"
 )
 social(
