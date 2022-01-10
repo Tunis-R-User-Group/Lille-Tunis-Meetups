@@ -20,7 +20,7 @@ social(
     subtitle = "",
     author = "Margot Brard",
     institute = "ThinkR",
-    date = "Jeudi 24 Février 2022 - 18:00 CET",
+    date = "Jeudi 24 Février 2022 - 18:30 CET",
     picture = "https://avatars.githubusercontent.com/u/20540890",
     website = "https://thinkr.fr",
     date_short = "2022-02-24",
