@@ -18,7 +18,7 @@ social(
   rmd_params = list(
     title = "{golem}",
     subtitle = "",
-    author = "Margot Brard",
+    author = "Margot Brard, *Ph.D.*",
     institute = "ThinkR",
     date = "Jeudi 24 Février 2022 - 18:30 CET",
     picture = "https://avatars.githubusercontent.com/u/20540890",
