@@ -14,7 +14,9 @@ output: github_document
 
 ```{r text-fr, include = FALSE}
 text_fr <- 'Les groupes R : Tunis et Lille organisent un nouveau MeetUp le %s avec %s !
+
 %s
+
 « %s » - %s
 
 ![Affiche Meetup Lille/Tunis R User Group](https://raw.githubusercontent.com/Tunis-R-User-Group/Lille-Tunis-Meetups/main/meetups/%s/ads/%s.png)
