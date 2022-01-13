@@ -19,9 +19,18 @@ rscript <- list.files(path = "R", pattern = "^20.*\\.R$", full.names = TRUE)
 meetup <- sub("\\.R$", "", basename(rscript))
 png <- sprintf("meetups/%s/ads/%s.png", meetup, meetup)
 
-outdated <- !file.exists(png) |
-  file.mtime(png) < file.mtime(rscript) |
-  file.mtime(png) < file.mtime("assets/social.R")
+outdated <- !file.exists(png) ||
+  file.mtime(png) <  min(
+    sapply(
+      X = c(
+        rscript,
+        "assets/social.R",
+        "assets/poster.Rmd",
+        "assets/announcement.Rmd"
+      ),
+      FUN = file.mtime
+    )
+  )
 
 invisible(lapply(rscript[outdated], source, encoding = "UTF-8"))
 ```
