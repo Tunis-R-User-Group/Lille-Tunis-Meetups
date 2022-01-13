@@ -12,7 +12,6 @@ Veuillez trouver dans ce dépôt les Meetups issues de la collaboration entre R 
 
 ```{r, echo = FALSE, message = FALSE}
 source("assets/social.R")
-library(glue)
 library(here)
 
 rscript <- list.files(path = "R", pattern = "^20.*\\.R$", full.names = TRUE)
@@ -36,8 +35,18 @@ invisible(lapply(rscript[outdated], source, encoding = "UTF-8"))
 ```
 
 ```{r, results = "asis", echo = FALSE}
-img <- glue::glue('<a href="meetups/{meetup}/material/"><img alt="Affiche du Meetup du {meetup}" src="{base_ads[[1]]}" width="192" height="108" /><br/>{meetup}</a>')
-cell <- paste0('<td align = "center">', img, "</td>")
+cell <- sprintf(
+  paste0(
+    '<td align = "center">',
+      '<a href="meetups/%s/materials/README.md">',
+        '<img alt="Affiche du Meetup du %s" src="%s" width="192" height="108" />',
+        "<br/>",
+        "%s",
+      "</a>",
+    "</td>"
+  ),
+  meetup, meetup, base_ads[[1]], meetup
+)
 cols <- 4
 rows <- ceiling(length(cell) / cols)
 row_id <- rep(seq_len(rows), each = cols, length.out = length(cell))
