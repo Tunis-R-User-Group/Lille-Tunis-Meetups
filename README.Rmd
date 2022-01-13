@@ -18,7 +18,7 @@ rscript <- list.files(path = "R", pattern = "^20.*\\.R$", full.names = TRUE)
 meetup <- sub("\\.R$", "", basename(rscript))
 base_ads <- paste0(sprintf("meetups/%s/ads/%s", meetup, meetup), c(".png", ".md"))
 
-outdated <- !all(sapply(base_ads, file.exists)) ||
+outdated <- !all(sapply(base_ads, file.exists)) |
   min(sapply(base_ads, file.mtime)) <  max(
     sapply(
       X = c(

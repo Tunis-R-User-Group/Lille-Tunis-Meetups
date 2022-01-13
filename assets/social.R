@@ -40,13 +40,14 @@ social <- function(
     )
     # file.create(file.path(output, c("materials", "ads"), ".gitkeep"))
 
-    if (length(list.files(file.path(output, "materials", "README.md"))) == 0) {
+    readme_file <- file.path(output, "materials", "README.md")
+    if (!file.exists(readme_file) | file.mtime(readme_file) < file.mtime("assets/social.R")) {
       writeLines(
         sprintf(
           "# %s\n\nOrateur•trice : %s\n\n- Vidéo : \n\n- Diapositives : ",
           rmd_params[["title"]], rmd_params[["author"]]
         ),
-        con = file.path(output, "materials", "README.md")
+        con = readme_file
       )
     }
 
