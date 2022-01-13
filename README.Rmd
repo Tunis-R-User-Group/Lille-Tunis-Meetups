@@ -17,10 +17,10 @@ library(here)
 
 rscript <- list.files(path = "R", pattern = "^20.*\\.R$", full.names = TRUE)
 meetup <- sub("\\.R$", "", basename(rscript))
-png <- sprintf("meetups/%s/ads/%s.png", meetup, meetup)
+base_ads <- paste0(sprintf("meetups/%s/ads/%s", meetup, meetup), c(".png", ".md"))
 
-outdated <- !file.exists(png) ||
-  file.mtime(png) <  min(
+outdated <- !all(sapply(base_ads, file.exists)) ||
+  min(sapply(base_ads, file.mtime)) <  max(
     sapply(
       X = c(
         rscript,
