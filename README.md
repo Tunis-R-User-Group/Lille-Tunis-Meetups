@@ -20,12 +20,6 @@ entre R Lille et Tunis R User Group.
 
 </td>
 
-<td align="center">
-
-<img alt="Poster for 2022-XX-XX Meetup" src="meetups/2022-XX-XX/ads/2022-XX-XX.png" width="192" height="108" /><br /><a href="meetups/2022-XX-XX">2022-XX-XX</a>
-
-</td>
-
 </tr>
 
 </table>
