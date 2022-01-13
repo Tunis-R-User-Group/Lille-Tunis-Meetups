@@ -36,9 +36,8 @@ invisible(lapply(rscript[outdated], source, encoding = "UTF-8"))
 ```
 
 ```{r, results = "asis", echo = FALSE}
-img <- glue::glue('<img alt="Poster for {meetup} Meetup" src="{base_ads[[1]]}" width="192" height="108" />')
-png_link <- glue::glue('<a href="meetups/{meetup}">{meetup}</a>')
-cell <- paste0('<td align = "center">', img, "<br />", png_link, "</td>")
+img <- glue::glue('<a href="meetups/{meetup}/material/"><img alt="Affiche du Meetup du {meetup}" src="{base_ads[[1]]}" width="192" height="108" /><br/>{meetup}</a>')
+cell <- paste0('<td align = "center">', img, "</td>")
 cols <- 4
 rows <- ceiling(length(cell) / cols)
 row_id <- rep(seq_len(rows), each = cols, length.out = length(cell))
