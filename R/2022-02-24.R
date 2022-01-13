@@ -14,7 +14,7 @@ bio_text <- paste(
 social(
   output = here::here("meetups/2022-02-24"),
   rmd_params = list(
-    title = "De la Création au Déploiement d’Applications {shiny} avec {golem}",
+    title = "De la Création au Déploiement d'Applications {shiny} avec {golem}",
     subtitle = "",
     author = "Margot Brard, *Ph.D.*",
     institute = "ThinkR",
