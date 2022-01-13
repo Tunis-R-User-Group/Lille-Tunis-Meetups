@@ -43,7 +43,7 @@ social <- function(
     if (length(list.files(file.path(output, "materials", "README.md"))) == 0) {
       writeLines(
         sprintf(
-          "# %s\n\nSpeaker: %s\n\n- Video: \n\n- Slides: ",
+          "# %s\n\Orateur•trice : %s\n\n- Vidéo : \n\n- Diapositives : ",
           rmd_params[["title"]], rmd_params[["author"]]
         ),
         con = file.path(output, "materials", "README.md")
