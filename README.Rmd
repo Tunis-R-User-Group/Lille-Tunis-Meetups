@@ -12,24 +12,31 @@ Veuillez trouver dans ce dépôt les Meetups issues de la collaboration entre R 
 
 ```{r, echo = FALSE, message = FALSE}
 source("assets/social.R")
-library(here)
 
 rscript <- list.files(path = "R", pattern = "^20.*\\.R$", full.names = TRUE)
 meetup <- sub("\\.R$", "", basename(rscript))
 base_ads <- paste0(sprintf("meetups/%s/ads/%s", meetup, meetup), c(".png", ".md"))
 
-outdated <- !all(sapply(base_ads, file.exists)) |
-  min(sapply(base_ads, file.mtime)) <  max(
-    sapply(
-      X = c(
-        rscript,
-        "assets/social.R",
-        "assets/poster.Rmd",
-        "assets/announcement.Rmd"
-      ),
-      FUN = file.mtime
-    )
+check_outdated <- function(r, a) {
+  sapply(
+    X = seq_along(r),
+    FUN = function(i) {
+      !all(sapply(a[c(i, i + 1)], file.exists)) |
+        min(sapply(a[c(i, i + 1)], file.mtime)) <  max(
+          sapply(
+            X = c(
+              r[i],
+              "assets/social.R",
+              "assets/poster.Rmd",
+              "assets/announcement.Rmd"
+            ),
+            FUN = file.mtime
+          )
+        )
+    }
   )
+}
+outdated <- check_outdated(rscript, base_ads)
 
 invisible(lapply(rscript[outdated], source, encoding = "UTF-8"))
 ```
