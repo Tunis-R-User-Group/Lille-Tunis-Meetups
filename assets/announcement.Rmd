@@ -2,7 +2,7 @@
 params:
   title: "Title"
   author: "Firstname Lastname"
-  date: 'Thursday, the 29<sup><i style="font-size:0.5em;">th</i></sup> of April, 2021 – 18 h 00 (CEST / UTC + 2)'
+  date: 'Thursday, the 29<sup><i style="font-size:0.5em;">th</i></sup> of April, 2021 - 18 h 00 (CEST / UTC + 2)'
   date_short: "2021-04-29"
   abstract: "Abstract"
   biography: "Biography"
