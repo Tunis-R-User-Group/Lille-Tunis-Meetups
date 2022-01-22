@@ -1,0 +1,63 @@
+---
+params:
+  title: "Title"
+  author: "Firstname Lastname"
+  date: 'Thursday, the 29<sup><i style="font-size:0.5em;">th</i></sup> of April, 2021 - 18 h 00 (CEST / UTC + 2)'
+  date_short: "2021-04-29"
+  abstract: "Abstract"
+  biography: "Biography"
+  survey_url: "https://"
+pagetitle: Meetup
+output: github_document
+---
+
+```{r text-fr, include = FALSE}
+text_fr <- '# [Meetup Lille/Tunis R User Group] \"%s\" - %s - %s
+
+Les groupes R : Tunis et Lille organisent un nouveau MeetUp le %s avec %s !
+
+%s
+
+« %s » - %s
+
+![Affiche Meetup Lille/Tunis R User Group](https://raw.githubusercontent.com/Tunis-R-User-Group/Lille-Tunis-Meetups/main/meetups/%s/ads/%s.png)
+
+[Résumé]  
+%s
+
+[Biographie]  
+%s
+
+[A Propos]  
+Cet événement est organisé par les groupes R de Lille (https://rlille.fr/) et Tunis.  
+La langue du Meetup est le français.  
+Le Meetup sera enregistré et rendu disponible sur YouTube.
+
+[Inscription]  
+Pour assister au Meetup, veuillez remplir ce court formulaire : %s  
+Le lien Zoom sera envoyé par courriel après inscription et quelques jours avant le début du Meetup.
+
+[Média Sociaux]  
+- Meetup :
+  - https://www.meetup.com/tunis-r-user-group
+  - https://www.meetup.com/RLille
+
+- Twitter :
+  - https://twitter.com/TunisRUserGroup
+  - https://twitter.com/RLille_RUG
+'
+```
+
+```{r content, results = "asis", echo = FALSE}
+cat(sprintf(
+  text_fr,
+  params[["title"]], params[["author"]], params[["date"]],
+  params[["date"]], params[["author"]],
+  params[["date"]],
+  params[["title"]], params[["author"]],
+  params[["date_short"]], params[["date_short"]],
+  params[["abstract"]],
+  params[["biography"]],
+  params[["survey_url"]]
+))
+```
