@@ -29,8 +29,8 @@ Les groupes R : Tunis et Lille organisent un nouveau MeetUp le %s avec %s !
 %s
 
 [A Propos]  
-Cet événement est organisé par les groupes R de Lille (https://rlille.fr/) et Tunis.
-La langue du Meetup est le français.
+Cet événement est organisé par les groupes R de Lille (https://rlille.fr/) et Tunis.  
+La langue du Meetup est le français.  
 Le Meetup sera enregistré et rendu disponible sur YouTube.
 
 [Inscription]  
