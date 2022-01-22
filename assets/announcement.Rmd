@@ -12,7 +12,7 @@ output: github_document
 ---
 
 ```{r text-fr, include = FALSE}
-text_fr <- '# [Affiche Meetup Lille/Tunis R User Group] \"%s\" - %s - %s
+text_fr <- '# [Meetup Lille/Tunis R User Group] \"%s\" - %s - %s
 
 Les groupes R : Tunis et Lille organisent un nouveau MeetUp le %s avec %s !
 
