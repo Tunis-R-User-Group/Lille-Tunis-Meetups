@@ -7,13 +7,14 @@ params:
   abstract: "Abstract"
   biography: "Biography"
   survey_url: "https://"
-title: '`r sprintf("[Affiche Meetup Lille/Tunis R User Group] \"%s\" - %s - %s", params[["title"]], params[["author"]], params[["date"]])`'
 pagetitle: Meetup
 output: github_document
 ---
 
 ```{r text-fr, include = FALSE}
-text_fr <- 'Les groupes R : Tunis et Lille organisent un nouveau MeetUp le %s avec %s !
+text_fr <- '# [Affiche Meetup Lille/Tunis R User Group] \"%s\" - %s - %s
+
+Les groupes R : Tunis et Lille organisent un nouveau MeetUp le %s avec %s !
 
 %s
 
@@ -46,11 +47,12 @@ Le lien Zoom sera envoyé par courriel après inscription et quelques jours avan
   - https://twitter.com/TunisRUserGroup
   - https://twitter.com/RLille_RUG
 '
-````
+```
 
 ```{r content, results = "asis", echo = FALSE}
 cat(sprintf(
   text_fr,
+  params[["title"]], params[["author"]], params[["date"]],
   params[["date"]], params[["author"]],
   params[["date"]],
   params[["title"]], params[["author"]],
