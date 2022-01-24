@@ -38,11 +38,14 @@ Pour assister au Meetup, veuillez remplir ce court formulaire : %s
 Le lien Zoom sera envoyé par courriel après inscription et quelques jours avant le début du Meetup.
 
 [Média Sociaux]  
+
 - Meetup :
+
   - https://www.meetup.com/tunis-r-user-group
   - https://www.meetup.com/RLille
 
 - Twitter :
+
   - https://twitter.com/TunisRUserGroup
   - https://twitter.com/RLille_RUG
 '
