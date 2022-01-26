@@ -58,6 +58,10 @@ Le lien Zoom sera envoyé par courriel après inscription et quelques jours avan
 
   - https://www.instagram.com/tunisrusergroup/
 
+- Slack :
+
+  - https://rlille.slack.com/
+
 '
 ```
 
