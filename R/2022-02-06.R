@@ -23,6 +23,6 @@ social(
     date_short = "2022-02-06",
     abstract = abstract_text,
     biography = bio_text,
-    survey_url = "464fn7x5"
+    survey_url = "https://tinyurl.com/464fn7x5"
   )
 )
