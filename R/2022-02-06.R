@@ -5,7 +5,7 @@ abstract_text <- paste(
   sep = "\n"
 )
 bio_text <- paste(
-  "Mohammed Fodil est un instructeur certifié de R Studio. Il a obtenu un doctorat en économie.",
+  "Mohamed Fodil est un instructeur certifié de R Studio. Il a obtenu un doctorat en économie.",
   "Fodil est l'auteur de deux packages R : ralger pour faciliter le scraping web et BARIS pour travailler avec l'API du portail français de données ouvertes.",
   "Il aime partager ses connaissances en science des données par le biais d'activités d'enseignement, et son package R préféré est {ggplot2}.",
   sep = "  \n"
@@ -15,7 +15,7 @@ social(
   rmd_params = list(
     title = "DA la Découverte de la Création des Applications R Shiny",
     subtitle = "",
-    author = "Mohammed El Fodil Ihaddaden, *Ph.D.* In Economics",
+    author = "Mohamed El Fodil Ihaddaden, *Ph.D.* In Economics",
     institute = "Data Scientist, R et Shiny Developer",
     date = "Dimanche 6 Février 2022 - 18:00 CET",
     picture = "https://ihaddadenfodil.com/authors/admin/avatar_huc09fd31ce9bb786d1041f70ffa59556f_325132_250x250_fill_q90_lanczos_center.jpg",
