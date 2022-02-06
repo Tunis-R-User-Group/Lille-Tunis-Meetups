@@ -72,11 +72,12 @@ cat("</table>\n")
 ## Proposer Un Meetup
 
 Pour proposer un Meetup, il suffit de générer un "Pull Request" (PR) avec un script R localisé dans le dossier `R`,
-contenant les informations comme dans l'exemple ci-dessous.  
+contenant les informations comme dans l'exemple ci-dessous (*p.ex.*, `R/2022-02-24.R`).  
 Le PR sera ensuite revue, modifié (au besoin) et enfin validé par l'équipe organisatrice.  
 Pour finir, l'événément sera publié sur le site Meetup.
 
 ```{r, eval = FALSE, echo = TRUE}
+# R/2022-02-24.R
 social(
   output = here::here("meetups/2022-02-24"),
   rmd_params = list(
