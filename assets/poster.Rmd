@@ -22,11 +22,16 @@ output:
 
 ```{r setup, include = FALSE}
 options(htmltools.dir.version = FALSE)
+if (nzchar(params[["picture"]]) | params[["picture"]] == "none") {
+  params_picture <- "user-solid.svg"
+} else {
+  params_picture <- params[["picture"]]
+}
 ```
 
 class: title-slide
 
-.left[<img src = "`r params[["picture"]]`" height = "240px" width = "240px" id = "picture" />]
+.left[<img src = "`r params_picture`" height = "240px" width = "240px" id = "picture" />]
 
 .right[
 

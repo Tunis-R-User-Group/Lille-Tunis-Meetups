@@ -86,7 +86,7 @@ social(
     author = "Prénom Nom", # votre prénom, nom et éventuellement titre
     institute = "Affiliation", # votre affiliation
     date = "Jeudi 24 Février 2022 - 18:30 CET", # la date de votre présentation
-    picture = "https://github.com/Tunis-R-User-Group/Lille-Tunis-Meetups/raw/main/assets/rlille_tunis.svg", # l'url de votre photo
+    picture = "none", # l'url de votre photo ou "none"
     website = "Votre site web", # l'url de votre site web
     date_short = "2022-02-24", # la date de votre présentation au format YYYY-MM-DD
     abstract = paste(# un résumé de votre présentation
