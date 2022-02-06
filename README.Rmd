@@ -15,7 +15,11 @@ source("assets/social.R")
 
 rscript <- list.files(path = "R", pattern = "^20.*\\.R$", full.names = TRUE)
 meetup <- sub("\\.R$", "", basename(rscript))
-base_ads <- paste0(sprintf("meetups/%s/ads/%s", meetup, meetup), c(".png", ".md"))
+base_ads <- unlist(lapply(
+  X = sprintf("meetups/%s/ads/%s", meetup, meetup),
+  FUN = paste0,
+  c(".png", ".md")
+))
 
 check_outdated <- function(r, a) {
   sapply(
@@ -52,7 +56,7 @@ cell <- sprintf(
       "</a>",
     "</td>"
   ),
-  meetup, meetup, base_ads[[1]], meetup
+  meetup, meetup, grep("\\.png$", base_ads, value = TRUE), meetup
 )
 cols <- 4
 rows <- ceiling(length(cell) / cols)
