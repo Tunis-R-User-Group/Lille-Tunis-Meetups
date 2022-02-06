@@ -5,16 +5,34 @@
 <!-- [![License](https://img.shields.io/github/license/Tunis-R-User-Group/Lille-Tunis-Meetups)](LICENSE) -->
 <!-- badges: end -->
 
+## Meetups
+
+Veuillez trouver les Meetups passés et futures de la collaboration entre
+R Lille et Tunis R User Group.
+
+<table>
+<tr>
+<td align="center">
+<a href="meetups/2022-02-06/materials/README.md"><img alt="Affiche du Meetup du 2022-02-06" src="meetups/2022-02-06/ads/2022-02-06.png" width="192" height="108" /><br/>2022-02-06</a>
+</td>
+<td align="center">
+<a href="meetups/2022-02-24/materials/README.md"><img alt="Affiche du Meetup du 2022-02-24" src="meetups/2022-02-24/ads/2022-02-24.png" width="192" height="108" /><br/>2022-02-24</a>
+</td>
+</tr>
+</table>
+
 ## Proposer Un Meetup
 
 Pour proposer un Meetup, il suffit de générer un “Pull Request” (PR)
 avec un script R localisé dans le dossier `R`, contenant les
-informations comme dans l’exemple ci-dessous.  
+informations comme dans l’exemple ci-dessous (*p.ex.*,
+`R/2022-02-24.R`).  
 Le PR sera ensuite revue, modifié (au besoin) et enfin validé par
 l’équipe organisatrice.  
 Pour finir, l’événément sera publié sur le site Meetup.
 
 ``` r
+# R/2022-02-24.R
 social(
   output = here::here("meetups/2022-02-24"),
   rmd_params = list(
@@ -42,19 +60,3 @@ social(
 ```
 
 *Note*: La date proposée dans le PR pourra être modifiée par la suite.
-
-## Meetups
-
-Veuillez trouver les Meetups passés et futures de la collaboration entre
-R Lille et Tunis R User Group.
-
-<table>
-<tr>
-<td align="center">
-<a href="meetups/2022-02-06/materials/README.md"><img alt="Affiche du Meetup du 2022-02-06" src="meetups/2022-02-06/ads/2022-02-06.png" width="192" height="108" /><br/>2022-02-06</a>
-</td>
-<td align="center">
-<a href="meetups/2022-02-24/materials/README.md"><img alt="Affiche du Meetup du 2022-02-24" src="meetups/2022-02-24/ads/2022-02-24.png" width="192" height="108" /><br/>2022-02-24</a>
-</td>
-</tr>
-</table>
