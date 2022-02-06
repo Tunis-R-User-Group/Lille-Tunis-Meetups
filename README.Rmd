@@ -8,6 +8,44 @@ output: github_document
 <!-- [![License](https://img.shields.io/github/license/Tunis-R-User-Group/Lille-Tunis-Meetups)](LICENSE) -->
 <!-- badges: end -->
 
+## Proposer Un Meetup
+
+Pour proposer un Meetup, il suffit de générer un "Pull Request" (PR) avec un script R localisé dans le dossier `R`,
+contenant les informations comme dans l'exemple ci-dessous.  
+Le PR sera ensuite revue, modifié (au besoin) et enfin validé par l'équipe organisatrice.  
+Pour finir, l'événément sera publié sur le site Meetup.
+
+```{r, eval = FALSE, echo = TRUE}
+social(
+  output = here::here("meetups/2022-02-24"),
+  rmd_params = list(
+    title = "Un Titre", # le titre de votre présentation
+    subtitle = "", # un sous-titre optionnel
+    author = "Prénom Nom", # votre prénom, nom et éventuellement titre
+    institute = "Affiliation", # votre affiliation
+    date = "Jeudi 24 Février 2022 - 18:30 CET", # la date de votre présentation
+    picture = "https://github.com/Tunis-R-User-Group/Lille-Tunis-Meetups/raw/main/assets/rlille_tunis.svg", # l'url de votre photo
+    website = "Votre site web", # l'url de votre site web
+    date_short = "2022-02-24", # la date de votre présentation au format YYYY-MM-DD
+    abstract = paste(# un résumé de votre présentation
+      "Un résumé compatible avec Markdown",
+      "(c.-à-d., double espaces pour les sauts de ligne dans le même paragraphe, etc.)",
+      sep = "\n  "
+    ),
+    biography = paste(# une biographie de vous-même
+      "Une biographie compatible avec Markdown",
+      "(c.-à-d., double espaces pour les sauts de ligne dans le même paragraphe, etc.)",
+      sep = "\n  "
+    ),
+    survey_url = "" # Lien d'inscription au meetup fourni par l'équipe organisatrice
+  )
+)
+```
+
+*Note*: La date proposée dans le PR pourra être modifiée par la suite.
+
+## Meetups
+
 Veuillez trouver dans ce dépôt les Meetups issues de la collaboration entre R Lille et Tunis R User Group.
 
 ```{r, echo = FALSE, message = FALSE}
