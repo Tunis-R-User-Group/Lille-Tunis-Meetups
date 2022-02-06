@@ -13,7 +13,7 @@ bio_text <- paste(
 social(
   output = here::here("meetups/2022-02-06"),
   rmd_params = list(
-    title = "DA la Découverte de la Création des Applications R Shiny",
+    title = "A la Découverte de la Création des Applications R Shiny",
     subtitle = "",
     author = "Mohamed El Fodil Ihaddaden, *Ph.D.* In Economics",
     institute = "Data Scientist, R et Shiny Developer",
