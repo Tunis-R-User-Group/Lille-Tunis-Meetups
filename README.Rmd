@@ -46,7 +46,7 @@ social(
 
 ## Meetups
 
-Veuillez trouver dans ce dépôt les Meetups issues de la collaboration entre R Lille et Tunis R User Group.
+Veuillez trouver les Meetups passés et futures de la collaboration entre R Lille et Tunis R User Group.
 
 ```{r, echo = FALSE, message = FALSE}
 source("assets/social.R")
