@@ -22,10 +22,10 @@ output:
 
 ```{r setup, include = FALSE}
 options(htmltools.dir.version = FALSE)
-if (nzchar(params[["picture"]]) | params[["picture"]] == "none") {
-  params_picture <- "user-solid.svg"
-} else {
+if (nzchar(params[["picture"]]) & params[["picture"]] != "none") {
   params_picture <- params[["picture"]]
+} else {
+  params_picture <- "user-solid.svg"
 }
 ```
 
