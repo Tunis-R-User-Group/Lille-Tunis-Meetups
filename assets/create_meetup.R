@@ -41,7 +41,13 @@ create_meetup <- function(
     # file.create(file.path(output, c("materials", "ads"), ".gitkeep"))
 
     readme_file <- file.path(output, "materials", "README.md")
-    if (!file.exists(readme_file) | file.mtime(readme_file) < file.mtime("assets/create_meetup.R")) {
+    if (
+      !file.exists(readme_file) |
+      (
+        file.mtime(readme_file) < file.mtime("assets/create_meetup.R") &
+        as.Date(basename(output)) < Sys.Date()
+      )
+    ) {
       writeLines(
         sprintf(
           "# %s\n\nOrateur•trice : %s\n\n- Vidéo : \n\n- Diapositives : ",
