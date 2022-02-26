@@ -33,6 +33,8 @@ create_meetup <- function(
   chrome_path,
   delay = 1
 ) {
+  message(sprintf("Running %s", basename(output)))
+
   render_meetup <- function(input_poster, input_announcement, output, rmd_params, chrome_path, delay = 1) {
     devnull <- sapply(
       X = file.path(output, c("materials", "ads")),
