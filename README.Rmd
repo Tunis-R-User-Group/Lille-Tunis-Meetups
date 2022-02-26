@@ -13,7 +13,7 @@ output: github_document
 Veuillez trouver les Meetups passés et futures de la collaboration entre R Lille et Tunis R User Group.
 
 ```{r, echo = FALSE, message = FALSE}
-source("assets/social.R")
+source("assets/create_meetup.R")
 
 rscript <- list.files(path = "R", pattern = "^20.*\\.R$", full.names = TRUE)
 meetup <- sub("\\.R$", "", basename(rscript))
@@ -69,7 +69,7 @@ Pour finir, l'événément sera publié sur le site Meetup.
 
 ```{r, eval = FALSE, echo = TRUE}
 # R/2022-02-24.R
-social(
+create_meetup(
   output = here::here("meetups/2022-02-24"),
   rmd_params = list(
     title = "Un Titre", # le titre de votre présentation

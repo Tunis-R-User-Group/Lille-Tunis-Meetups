@@ -33,7 +33,7 @@ Pour finir, l’événément sera publié sur le site Meetup.
 
 ``` r
 # R/2022-02-24.R
-social(
+create_meetup(
   output = here::here("meetups/2022-02-24"),
   rmd_params = list(
     title = "Un Titre", # le titre de votre présentation

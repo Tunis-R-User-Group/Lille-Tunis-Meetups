@@ -25,7 +25,7 @@ library(callr)
 library(rmarkdown)
 library(xaringanBuilder)
 
-social <- function(
+create_meetup <- function(
   input_poster = here::here("assets/poster.Rmd"),
   input_announcement = here::here("assets/announcement.Rmd"),
   output,
@@ -41,7 +41,7 @@ social <- function(
     # file.create(file.path(output, c("materials", "ads"), ".gitkeep"))
 
     readme_file <- file.path(output, "materials", "README.md")
-    if (!file.exists(readme_file) | file.mtime(readme_file) < file.mtime("assets/social.R")) {
+    if (!file.exists(readme_file) | file.mtime(readme_file) < file.mtime("assets/create_meetup.R")) {
       writeLines(
         sprintf(
           "# %s\n\nOrateur•trice : %s\n\n- Vidéo : \n\n- Diapositives : ",

@@ -10,7 +10,7 @@ bio_text <- paste(
   "Il aime partager ses connaissances en science des données par le biais d'activités d'enseignement, et son package R préféré est {ggplot2}.",
   sep = "  \n"
 )
-social(
+create_meetup(
   output = here::here("meetups/2022-02-06"),
   rmd_params = list(
     title = "A la Découverte de la Création des Applications R Shiny",

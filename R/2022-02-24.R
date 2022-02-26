@@ -11,7 +11,7 @@ bio_text <- paste(
   "Elle est la lauréate de l'édition 2021 du Shiny Contest (https://blog.rstudio.com/2021/06/24/winners-of-the-3rd-annual-shiny-contest/). Au grand désespoir de son mari - *qui l'a trouvée un peu trop geek sur ce coup* - elle a développé avec {golem} une app Shiny pour leur mariage : {wedding} (https://github.com/ThinkR-open/wedding).",
   sep = "  \n"
 )
-social(
+create_meetup(
   output = here::here("meetups/2022-02-24"),
   rmd_params = list(
     title = "De la Création au Déploiement d'Applications {shiny} avec {golem}",
