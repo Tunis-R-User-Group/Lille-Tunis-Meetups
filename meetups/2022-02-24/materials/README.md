@@ -2,6 +2,5 @@
 
 Oratrice : Margot Brard, *Ph.D.*
 
-- Vidéo : 
-- Diapositives : 
+- Vidéo : https://youtu.be/nfP-mGIsqVs
 - Shiny app (demo) : https://connect.thinkr.fr/app-meetup-lille-tunis/
